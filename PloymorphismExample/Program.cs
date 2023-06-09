@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PloymorphismExample
 {
@@ -21,6 +21,8 @@ namespace PloymorphismExample
             {
                 car.Repair();
             }
+            Audi audi = new Audi("200", "blue", "A4");
+            audi.Repair();
             Car bmwZ3 = new BMW("200", "black", "Z3");
             Car audiA3 = new BMW("200", "red", "A3");
             bmwZ3.SetCarIDInfo(1, "Akinalp");
