@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +20,15 @@ namespace WpfExercise
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
 	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-			//Instead of xaml we can also use c# to create the application
-			/*
+    {
+
+     
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            //Instead of xaml we can also use c# to create the application
+            /*
 			Grid grid = new Grid();
 			this.Content = grid;
 			Button button = new Button();
@@ -37,28 +41,22 @@ namespace WpfExercise
 			button.Content = wrapPanel;
 			grid.Children.Add(button);
 			*/
-		}
+        }
 
-		private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-		{
 
-		}
+        private void PageButton_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new PageExample());
+        }
+        private void PageButton2_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new ListBoxSample());
+        }
+        private void PageButton3_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new TriggerSamples());
+        }
+    }
 
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			MessageBox.Show("Mouse Clicked");
-		}
 
-		private void Button_MouseUp(object sender, MouseButtonEventArgs e)
-		{
-			MessageBox.Show("Mouse up");
-
-		}
-
-		private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e)
-		{
-
-			//MessageBox.Show("Mouse up");
-		}
-	}
 }
